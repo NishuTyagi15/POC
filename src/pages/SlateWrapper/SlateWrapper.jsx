@@ -8,9 +8,9 @@ const SlateWrapper = () => {
     const dispatch = useDispatch();
     const titleList = useSelector(state => state)
 
-    useEffect(() => {
-        console.log("the titleList is:", titleList.title, Array.isArray(titleList.title));
-    }, [titleList])
+    // useEffect(() => {
+    //     console.log("the titleList is:", titleList.title, Array.isArray(titleList.title));
+    // }, [titleList])
 
     useEffect ( () => {
         dispatch(getElementList());
@@ -18,7 +18,7 @@ const SlateWrapper = () => {
     return (
         <div className="slatecontainer">
             {/* <ElementContainer />    */}
-            {/* {titleList.titles.map((item) => <ElementContainer item={item.title}/>)} */}
+            {titleList.titles.map((item) => <ElementContainer item={item.title}/>)}
         </div>
     )
 }

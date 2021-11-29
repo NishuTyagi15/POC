@@ -1,6 +1,8 @@
 import { SAVE_TITLE } from "./action";
 
-const initialState = []
+const initialState = {
+    titles: []
+}
 
 export const titleReducer = (state= initialState, action={}) => {
     console.log("The state is", state, "the action is", action);
